@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  background-color: rgb(0 193 168);
+  width: 760px;
+  height: 380px;
+  border-radius: 20px;
+}
+.name_card {
+  display: flex;
+  justify-content: left;
+  margin-left: -35px;
+  background-color: #ff8100;
+  background-size: revert;
+  width: 80%;
+  height: 45px;
+  margin-top: 30px;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  padding-left: 90px;
+  font-weight: 700;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.requsites {
+  margin-top: 5px;
+  margin-left: 50px;
+}
+input {
+  height: 40px;
+  width: 50%;
+  margin-top: 5px;
+  background-color: rgb(4 201 175);
+  border: none;
+  font-size: 18px;
+  padding-left: 15px;
+  border-bottom: 2px solid rgb(3 129 113);
+}
+label {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #313131;
+}
+.card {
+  display: flex;
+  width: 375px;
+  gap: 12px;
+}
+.card_date {
+  display: flex;
+  justify-content: space-between;
+  width: 340px;
+}
