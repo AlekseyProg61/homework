@@ -1,0 +1,6 @@
+.fa-circle-user:before, .fa-user-circle:before 
+{
+    content: "\f2bd";
+    font-size: 28px;
+    padding-right: 8px;
+}
