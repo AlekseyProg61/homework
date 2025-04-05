@@ -2,7 +2,6 @@
 label{
     font-size:20px;
     font-weight: bold;
-    margin-bottom: 10px;
 }
 input[type=text]{
     border-radius: 5px;
@@ -27,13 +26,23 @@ input:focus{
 }
 #valid::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #00a000;
-    content:'✓' ;
+}
+#invalid::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:red;
 }
 
 #invalid{
     border: 2px solid red;
 }
-
-input[type=checkbox]{
-    width: 30px;
+#toggle1{
+    content: "✓";
+}
+.form-check{
+    font-size: 16px;
+}
+textarea{
+    padding-left: 30px;
+    width: 50%;
+    height: 150px;
+    padding-top: 15px;
 }
