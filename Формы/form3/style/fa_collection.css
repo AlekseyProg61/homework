@@ -4,3 +4,8 @@
     font-size: 28px;
     padding-right: 8px;
 }
+.fa-at:before {
+    content: "\40";
+    padding-right: 8px;
+    font-size: 28px;
+}
