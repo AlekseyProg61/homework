@@ -9,22 +9,55 @@
     <title>Форма Регистрации</title>
 </head>
 <body>
+    <div class="border-block">
     <div class="container">
         <div class="block">
             <form action="">
-            <div class="block-label">
-                <div class="block"><label for="">Registration Form</label></div>
-                <div class="block"><label for="">Person Details</label></div>
+        <div class="input-form">
+        <div class="reg-form container">
+           <div class="block-label"><label for="">Registration Form</label></div> 
+        <div class="input-line"> 
+            <div class="line1">
+                <i class="fa-solid fa-circle-user"></i> <input class="input1" type="text" placeholder="Username"></div>
+                <div class="line1">
+            <i class="fa-solid fa-circle-user"></i> 
+            <input class="input1" type="email" placeholder="Email address"></div>
+            <div class="line1">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="password" id="password" placeholder="Password">
+            <input type="password" name="password" id="password" placeholder="Confirm password"></div>
             </div>
-        <div class="input-line">
-                <i class="fa-solid fa-circle-user"></i>
-            <div class="line1"><input type="text" placeholder="Username"></div>
-            <div class="line2"><input type="text" placeholder="First name"></div>
-            <div class="line3"><input type="text" placeholder="Last name"></div>
+        </div>
+            <div class="user-form container">
+            <label for="">Person Details</label>
+            <div class="input-line"> 
+            <div class="line2">
+            <input class="input2" type="text" placeholder="First name">
+            <input class="input2" type="text" placeholder="Last name">
             </div>
-            </form>
-            
+                <div class="block line3"><select class="select" name="input" id="">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <input class="input2" type="date" placeholder="mm/dd/yyyy">
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="input-line3 container">
+                <input type="checkbox" name="" id=""><span class="receive">I want to receive mews and special offers</span>
+            </div>
+                <div class="input-line3 container">
+                <input type="checkbox" name="" id=""><span class="receive">I want to receive mews and special offers</span>
+                </div>
+                <div class="input-line container"></div>
+                <hr>
+                <div class="input-line5 container">
+                    <button class="btn" type="submit">SUBMIT</button>
+                </div>
+            </div>
         </div>
     </div>
+</form>
 </body>
 </html>
