@@ -11,3 +11,8 @@
     content: "\e4e8";
     font-size: 28px;
 }
+.fa-at:before {
+    content: "\40";
+    padding-right: 8px;
+    font-size: 28px;
+}
