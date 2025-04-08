@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container{
+    height:100%;
+    background-color: #f3f3f3;
+    width: 900px;
+    margin: auto;
+    margin-top: 35px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.label_line{
+    display: flex;
+    gap: 15px;
+}
+
+.input-check{
+    margin-top: 10px;
+    font-size: 18px;
+    display: flex;
+    gap: 1rem;
+}
+/* input:valid + span::before {
+    position: absolute;
+    content: "✅";
+    padding-left: 5px;
+} */
+.block{
+    margin: 20px;
+}

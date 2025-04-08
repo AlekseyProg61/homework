@@ -1,0 +1,14 @@
+.fa-circle-user:before, .fa-user-circle:before 
+{
+    content: "\f2bd";
+    font-size: 28px;
+    padding-right: 8px;
+}
+.fa-at:before {
+    content: "\40";
+    padding-right: 8px;
+    font-size: 28px;
+}
+.fa-lock:before {
+    content: "\f023";
+    font-size: 28px;}
