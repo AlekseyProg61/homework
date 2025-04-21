@@ -45,8 +45,8 @@ while game and seth <= 11:
             game = False
             print(f"Конец игры. Сыграно {count-1} раундов")
             if gamer_score > cp_score:
-                print(f" Поздравляем!!! Вы выиграли!!! Ваши очки = {gamer_score}. Очки противника = {cp_score}")
+                print(f" Поздравляем {name}!!! Вы выиграли!!! Ваши очки = {gamer_score}. Очки противника = {cp_score}")
             elif gamer_score < cp_score:
-                print(f" Увы.Вы проиграли :( Ваши очки = {gamer_score}. Очки противника = {cp_score}")
+                print(f" Увы {name}.Вы проиграли :( Ваши очки = {gamer_score}. Очки противника = {cp_score}")
             else:
-                print(f"Ничья! Ваши очки = {gamer_score}. Очки противника = {cp_score} ")
+                print(f"Ничья! {name} ваши очки = {gamer_score}. Очки противника = {cp_score} ")
