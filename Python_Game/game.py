@@ -14,7 +14,6 @@ while game and seth <= 11:
             print(f"Раунд {count}")
             gamer = input("Чтобы сделать ход напиши: 'камень','ножницы','бумага'.\nМожно выбрать только один предмет: ")
             cp_action = random.choice(action)
-            print(cp_action)
             if gamer == "камень" and cp_action == "ножницы":
                 print(f"Вы выиграли {gamer} тупит {cp_action}")
                 gamer_score+=1
