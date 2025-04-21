@@ -39,6 +39,7 @@ while game and seth <= 11:
                 cp_score += 1
             elif cp_action == "бумага" and gamer == "бумага":
                 print(f"Ничья. Оба игрока выбрали {gamer}")
+            print(f"Текущий счёт. Ваши очки {gamer_score}, очки противника {cp_score}")
             count += 1
             seth += 1
         if start == "Стоп" or seth == 11:
