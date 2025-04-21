@@ -28,3 +28,43 @@ document.getElementById("speedButton").addEventListener("click", function () {
     `Вам нужно двигаться со скоростью =  ${speed} км/ч,чтобы проехать ${userDistance} км, за ${userTime} часов`
   );
 });
+
+
+euro = 0.87
+document.getElementById("converterButton").addEventListener("click", function () {
+  let userDollar = prompt("Введите сумму долларов,а мы переведём в евро");
+  converter = userDollar * euro;
+  alert(`${userDollar} долларов = ${converter} евро`);
+
+});
+
+gb = 1024
+document.getElementById("flashButton").addEventListener("click", function () {
+  let userFlash = prompt("Введите объём флэш памяти в ГБ");
+  volume = Math.floor(userFlash * gb / 820);
+  alert(`${volume} файлов размером в 820 мб , поместиться на флэшке размером в ${userFlash} ГБ`);
+});
+
+document.getElementById("chocolateButton").addEventListener("click", function () {
+  let userBank = prompt("Сколько у вас всего денег?");
+  let userPrice = prompt("Укажите цену шоколадки");
+  chocolate = Math.floor(userBank / userPrice);
+  remains = userBank - userPrice * chocolate;
+  alert(`Вы сможете купить ${chocolate} шоколадок. Остаток средств ${remains}`);
+
+});
+
+document.getElementById("flipButton").addEventListener
+  ("click",
+    function () {
+      let userNumber = prompt("Введите число,мы перевернем его: ")
+      let result = 0
+      while (userNumber > 0) {
+        interval = userNumber % 10
+        result = result * 10 + interval
+        userNumber = Math.floor(userNumber/10)
+      }
+      alert(`Результат ${result}`)
+        
+    }
+  );
