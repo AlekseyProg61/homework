@@ -4,7 +4,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  background-image: url("/Java-alert-prompt/img/java.jpg");
+  background-image: url("/img/java.jpg");
   background-size: cover;
 }
 
@@ -16,14 +16,13 @@ body {
   margin-top: 5px;
   border-radius: 10px;
 }
-.block-title2{
+.block-title2 {
   margin: 0 auto;
   background-color: #ededed;
   text-align: center;
   width: 650px;
-  margin-top: 70px;
+  margin-top: 2%;
   border-radius: 10px;
-
 }
 .btn {
   display: block;
@@ -38,13 +37,13 @@ body {
   border: 1px solid rgb(255, 255, 255);
 }
 .container {
-    background-color: #5828066b;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 5px;
-    border: 2px solid white;
-    width: 1024px;
-    margin-top: 17px;
+  background-color: #5828066b;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid white;
+  width: 1024px;
+  margin-top: 17px;
 }
 
 .block-button {
@@ -59,11 +58,11 @@ body {
   width: 300px;
   padding: 10px;
 }
-p{
+p {
   color: wheat;
 }
 
-.block-line{
+.block-line {
   display: flex;
   justify-content: space-around;
 }
