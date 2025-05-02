@@ -18,7 +18,7 @@ document.getElementById("squareButton").addEventListener("click", function () {
 document.getElementById("radiusButton").addEventListener("click", function () {
   let userRadius = prompt("Введите радиус окружности");
   radius = userRadius ** 2 * 3.14;
-  alert(`Периметр окружности =  ${radius}`);
+  alert(`Площадь окружности =  ${radius}`);
 });
 document.getElementById("speedButton").addEventListener("click", function () {
   let userDistance = prompt("Введите расстояние до города");
