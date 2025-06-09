@@ -100,19 +100,26 @@ console.log(
 // совершенное число или нет.
 
 function perfect_number2() {
-  let num = 24;
-  let num2 = 25;
+  let num = 1;
+  let num2 = 28;
   sum = 0;
   count = 2;
   for (i = num; i < num2; i++) {
-    if (num % i == 0) {
+    if (i == num && i < num2) {
+    }
+    while (count < i) {
+      count += i;
       sum += i;
+      if (count == 0) {
+      }
+      if (i == count) {
+      }
     }
   }
+  return sum == i;
 }
-return sum == num;
-
 console.log(
   "Ваше число совершенно,если true,false,если простое. Ваше число =",
-  perfect_number2()
+  perfect_number2(),
+  sum
 );
