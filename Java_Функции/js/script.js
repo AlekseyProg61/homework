@@ -116,10 +116,95 @@ function perfect_number2() {
       }
     }
   }
+<<<<<<< HEAD
   return sum == i;
+=======
+  return sum == num;
+>>>>>>> 468d538f5469492e22403206154fb47863d58b64
 }
 console.log(
   "Ваше число совершенно,если true,false,если простое. Ваше число =",
   perfect_number2(),
   sum
 );
+
+// Написать функцию, которая принимает время
+// (часы, минуты, секунды) и выводит его на экран в формате «чч: мм: сс».
+// 2
+// Если при вызове функции минуты и/или секунды не были
+// переданы, то выводить их как
+
+function time() {
+  let a = 12
+  let b = 35
+  let c = 55
+  let ch = "чч: "
+  let min = "мм: "
+  let sec = "сс: "
+  step = 0
+  let time_time = []
+  if (a != 0 && b != 0 && c != 0) {
+    time_time.push(a)
+    time_time.push(b)
+    time_time.push(c)
+    for (i = a; i <= a; i++) { step += i }
+    return step + ch + b + min + c + sec
+  }
+  else {
+    return a = 0, b = 0, c = 0
+  }
+}
+console.log("Время ", time())
+
+// Написать функцию, которая принимает часы, минуты и
+// секунды и возвращает это время в секундах.
+function time2() {
+  let a = 12
+  let b = 35
+  let c = 55
+  let sec = ":сс "
+  step = 0
+  let time_time = []
+  if (a != 0 && b != 0 && c != 0) {
+    time_time.push(a)
+    time_time.push(b)
+    time_time.push(c)
+    for (i = a; i <= a; i++) { step += i }
+    a *= 3600
+    b *= 60
+    sec2 = a + b + c
+    return sec2 + sec
+  }
+  else {
+    return a = 0, b = 0, c = 0
+  }
+}
+console.log("Время ", time2())
+
+// Написать функцию, которая принимает количество секунд,
+// переводит их в часы, минуты и секунды и возвращает в
+// виде строки «чч:мм:сс».
+
+function time3() {
+  let a = 43200
+  let b = 2100
+  let c = 55
+  let ch = "чч: "
+  let min = "мм: "
+  let sec = ":сс "
+  step = 0
+  let time_time = []
+  if (a != 0 && b != 0 && c != 0) {
+    time_time.push(a)
+    time_time.push(b)
+    time_time.push(c)
+    for (i = a; i <= a; i++) { step += i }
+    a /= 3600
+    b /= 60
+    return a + ch + b + min + c + sec
+  }
+  else {
+    return a = 0, b = 0, c = 0
+  }
+}
+console.log("Время ", time3())
