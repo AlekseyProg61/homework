@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+body {
+  background-color: beige;
+  background-image: url("/Java_Game/game/img/i.jpg");
+  background-position: 50%;
+  background-size: cover;
+}
+.block_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: wheat;
+}
+
+.container {
+  border: 1px solid orange;
+  padding: 10px;
+  width: 660px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.block_card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 90px;
+  height: 120px;
+  background-color: #4caf50;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 42px;
+  color: white;
+}
