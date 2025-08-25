@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/login.css">
+    <title>Регистрация пользователя</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="menu">
+        <ul>
+            <li><a class="btn" href="{{ url_for('home') }}">Назад</a></li>
+            <li><a class="btn" href="{{ url_for('task1') }}">Задача1</a></li>
+            <li><a class="btn" href="{{ url_for('task2') }}">Задача2</a></li>
+        </ul>
+        <p class="text-task">Пройдите регистрацию</p>
+        </div>
+    <!-- Форма -->
+    <h1>Регистрация</h1>
+    <div class="answer" id="answer"></div>
+    <form action="/register" method="post" class="form" id="form" >
+        <label class="label" for="firstName">Имя:</label>
+        <input type="text" id="firstName"  ><br>
+        <label class="label" for="lastName">Фамилия:</label>
+        <input type="text" id="lastName" ><br>
+        <label class="label" for="age">Дата рождения:</label>
+        <input type="date" id="age" ><br>
+        <label class="label" for="age">Email:</label>
+        <input type="email" name="email" id="email"><br>
+        <label class="label" for="sex" >Пол:</label>
+        <select name="sex" id="sex">
+            <option value="Мужской">Мужской</option>
+            <option value="Женский">Женский</option>
+        </select><br>
+        <label class="label" for="address" >Адрес доставки:</label>
+        <textarea name="address" id="address" rows="5" cols="33" placeholder="Введите адрес"></textarea><br>
+        <div class="block-radio">
+        <div class="form-radio">
+        <label class="text" for="subscribeNewsletter" >Пописаться на рассылку:</label>
+        <input type="checkbox" name="checkbox" for="subscribeNewsletter" id="subscribeNewsletter"><br>
+        </div>
+        </div>  
+        <div class="form-button">
+            <button id="btn" class="btn" type="button" onclick="collecting()">Регистрация</button>
+        </div>
+    <form>
+        </div>
+
+<script>
+    function collecting(){
+        let firstName = document.getElementById("firstName").value;
+        let lastName = document.getElementById("lastName").value;
+        let date = document.getElementById("age").value;
+        let sex = document.getElementById("sex").value;
+        let email = document.getElementById('email').value;
+        let address = document.getElementById('address').value;
+        let subscribeNewsletter = document.getElementById("subscribeNewsletter").value;
+        if (!firstName || !lastName || !date || !sex || !email || !address) 
+        { alert("Все поля обязательны для заполнения!"); 
+        return; }
+        const dataObject = {'Имя':`${firstName}`,'Фамилия':`${lastName}`,'Дата рождения':`${date}`,'Пол':`${sex}`,
+                    'Email':`${email}`,'Адрес доставки':`${address}`,'Подписка':`${subscribeNewsletter}`};
+        let oldTable = document.getElementById("dataTable");
+        if(oldTable){
+            oldTable.remove();
+        }
+        let newTable = document.createElement("table");
+        newTable.id = "dataTable";
+        newTable.style.borderCollapse = "collapse"; 
+        newTable.style.width = "620px"; 
+        newTable.style.border = "1px solid black";
+        const thead = document.createElement("thead");
+        const headerRow = document.createElement('tr');
+        for (let key in dataObject){
+            let th = document.createElement("th");
+            th.textContent = key; 
+            th.style.border = "1px solid black"; 
+            th.style.padding = "8px"; 
+            headerRow.appendChild(th);
+        }
+        thead.appendChild(headerRow); 
+        newTable.appendChild(thead);
+        const tbody = document.createElement("tbody");
+        const bodyRow = document.createElement("tr");
+        for (const value of Object.values(dataObject)){
+            let td = document.createElement("td"); 
+            td.textContent = value; 
+            td.style.border = "1px solid black"; 
+            td.style.padding = "8px";
+            td.style.fontSize = "16px"; 
+            bodyRow.appendChild(td); 
+        }
+        tbody.appendChild(bodyRow);
+        newTable.appendChild(tbody);
+        document.getElementById('answer').appendChild(newTable);
+        document.getElementById("form").style.display = "none";
+        console.log(newTable);
+    }
+</script>

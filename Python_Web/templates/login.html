@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/login.css">
+    <title>Форма авторизации</title>
+</head>
+<body>
+    
+    <div class="container">
+    <div class="menu">
+        <ul>
+            <li><a class="btn" href="{{ url_for('task1') }}">Задача1</a></li>
+        </ul>
+        </div>
+    <!-- Форма -->
+    <h1>Авторизация</h1>
+    <form action="/login" method="post" class="form" >
+        <label class="label" for="username">Логин:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label class="label" for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required><br>
+        <div class="form-button">
+            <button id="btn" class="btn" type="submit">Вход</button>
+            <button id="btn2" class="btn" type="text">Вспомнить пароль</button>
+        </div>
+    <form>
+        </div>
+    <script>
+    document.getElementById("btn").onclick = function(){
+        let button = document.getElementById("btn").style.backgroundColor = "red"
+        }
+        document.getElementById("btn2").onclick = function(){
+        let button = document.getElementById("btn").style.backgroundColor = "red"
+        let search = confirm("Вам есть 18 лет?");
+        if (search==false)
+        {
+            alert("Ничего не вышло");
+        }   
+        else {
+            alert("Пройдите инструктаж")
+        }
+        
+    }
+    </script>
+</body>
+</html>
