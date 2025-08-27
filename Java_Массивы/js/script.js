@@ -13,8 +13,9 @@ class Marker {
   print(text){
     const contextDiv = document.getElementById('content');
     for (let char of text){
-      if(this.inkLevel <= 0 ){
-        alert("Чернила закончились");
+      if (this.inkLevel <= 0) {
+        let errorText = document.getElementById('warning');
+        errorText.textContent = "Чернила закончились!!!";
         break;
       }
       if (char === ""){
@@ -36,10 +37,26 @@ class FilledMarker extends Marker {
     this.inkLevel += amount; 
   } 
 } 
-// Создаем экземпляр заполненного маркера 
-let marker = new FilledMarker("rgba(0, 21, 255, 1)", 2); 
-marker.refill(100); // Заполняем дополнительно чернилами 
-// Текст для печати const 
-listText = prompt("Введите текст: "); 
-// Печать текста 
-marker.print(listText);
+// Создание экземпляра маркера
+let marker = new FilledMarker("blue", 2); // Начальное количество чернил — 2 единицы
+marker.refill(1000); // Заполнение резервуара чернилами
+
+// Получаем элементы DOM
+const inputField = document.getElementById('text-input');
+const printButton = document.getElementById('print-button');
+const closeButton = document.getElementById('close-button');
+const contextDiv = document.getElementById('content');
+// Добавляем обработчик события клика на кнопку
+printButton.addEventListener('click', function() {
+  const userText = inputField.value.trim(); // Берём введённый текст
+  if (!userText.length) {
+    alert("Вы ничего не ввели.");
+    return;
+  }
+  marker.print(userText); // Отправляем текст на печать
+});
+
+closeButton.addEventListener('click', function () {
+  window.location.reload();
+})
+

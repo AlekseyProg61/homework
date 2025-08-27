@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="js/script.js" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Java_Классы</title>
+</head>
+<body>
+    <header>
+    <div class="header-title">
+        <h1>Java_Классы</h1>
+    </div>
+    <div class="header-menu">
+    <div class="menu">
+        <ul></ul>
+        <li><a class="btn" href="/Java_Массивы/index-2.html">Назад</a></li>
+        </div>
+    </div>
+    <title>До нового года осталось</title>
+    </header>
+        <div class="block-content">
+            <form action="">
+                <label for="inputDate">Введите день недели</label>
+                <input type="date" id="inputDate">
+                <button type="button" id="timeButton">Посчитать</button>
+            </form>
+        </div>
+        <div class="middle-content">
+    <div id="monthsBlock"></div>
+    <div id="daysBlock"></div>
+    <div id="hoursBlock"></div>
+    <div id="minutesBlock"></div>
+    </div>
+</body>
+<script>
+    class TimeNewYear extends Date {
+        constructor(inputDate){
+        super(inputDate);
+        this.nextNewYear = getnextNewYear;
+        }
+        getNextNewYear(){
+            const year = this.getFullYear();
+            if (this.getMonth == 11 && this.getDate() >= 31){
+                return new Date(year + 1,0,1);
+            }
+            else {
+                return new Date(year,11,31);
+            }
+
+        }
+    } 
+</script>
+</html>

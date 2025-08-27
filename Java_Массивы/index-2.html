@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="js/script.js" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Java_Классы</title>
+</head>
+<body>
+    <header>
+    <div class="header-title">
+        <h1>Java_Классы</h1>
+    </div>
+    <div class="header-menu">
+    <div class="menu">
+        <ul>
+        <li><a class="btn" href="/Java_Массивы/index.html">Назад</a></li>
+        <li><a class="btn" href="/Java_Массивы/index-3.html">Далее</a></li>
+        </ul>
+        </div>
+    </div>
+    </header>
+    <div class="block-content-scroll">
+        <div class="rectangle" id="rect">
+        </div>
+        <div class="icon-scroll">
+            <img class="img-up" id="img-up" src="/Java_Массивы/img/scroll-up.png" alt="">
+            <img class="img-down" id="img-down" src="/Java_Массивы/img/scroll-down.png" alt="">
+        </div>
+    </div>
+</body>
+<script>
+class ColorReservoir {
+constructor(rectangle,upScroll,downScroll) {
+    this.rectangle = document.getElementById(rectangle);
+    this.upScroll = document.getElementById(upScroll);
+    this.downScroll = document.getElementById(downScroll);
+    const stepSize = 20;
+    if (this.upScroll && this.downScroll) {
+    this.upScroll.addEventListener("click", () => this.changeToWhite(stepSize));
+    this.downScroll.addEventListener("click", () => this.changeToGray());
+    }
+}
+changeToWhite(stepSize) {
+    this.rectangle.style.background = "#ccc";
+}
+changeToGray() {
+this.rectangle.style.background = "#fc654f";
+}
+}
+const colorChanger = new ColorReservoir('rect', 'img-down', 'img-up');
+console.log(colorChanger);
+</script>
+</html>
