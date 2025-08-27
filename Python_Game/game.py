@@ -50,3 +50,5 @@ while game and seth <= 11:
                 print(f" Увы {name}.Вы проиграли :( Ваши очки = {gamer_score}. Очки противника = {cp_score}")
             else:
                 print(f"Ничья! {name} ваши очки = {gamer_score}. Очки противника = {cp_score} ")
+
+

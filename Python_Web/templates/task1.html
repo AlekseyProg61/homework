@@ -72,18 +72,17 @@
             switch(selectedOption){
                 case 'min':
                 result = Math.min(number1,number2,number3);
-                break
+                break;
                 case 'max':
                 result = Math.max(number1,number2,number3);
-                break
+                break;
                 case 'avg':
                 result = ((number1 + number2 + number3) / 3).toFixed(2);
-                break
+                break;
                 case "quantity":
                 result = count.length
                 break; 
             }
-            
             document.getElementById("answer").innerHTML = `Результат: ${result}`;
         }
     </script>

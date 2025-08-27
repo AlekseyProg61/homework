@@ -116,11 +116,11 @@ function perfect_number2() {
       }
     }
   }
-<<<<<<< HEAD
+
   return sum == i;
-=======
+
   return sum == num;
->>>>>>> 468d538f5469492e22403206154fb47863d58b64
+
 }
 console.log(
   "Ваше число совершенно,если true,false,если простое. Ваше число =",

@@ -37,9 +37,9 @@ class FilledMarker extends Marker {
   } 
 } 
 // Создаем экземпляр заполненного маркера 
-let marker = new FilledMarker("#838", 2); 
-marker.refill(150); // Заполняем дополнительно чернилами 
+let marker = new FilledMarker("rgba(0, 21, 255, 1)", 2); 
+marker.refill(100); // Заполняем дополнительно чернилами 
 // Текст для печати const 
-listText = ` List of Software Inc. workers with names, positions, departments, salaries. Best Regards Jeremy Clarkson - HR Manager of the HR Department `.trim(); 
+listText = prompt("Введите текст: "); 
 // Печать текста 
 marker.print(listText);
