@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    display: flex;
+    align-items: baseline;
+    gap: 5rem;
+}
+.btn {
+    background: #03A9F4;
+    font-size: large;
+    padding: 10px 40px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.history{
+    font-size: 18px;
+}
+
+p{
+    font-weight: 800;
+}

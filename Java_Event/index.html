@@ -1,0 +1,58 @@
+<!-- Создайте HTML-страницу, разместите на ней две кнопки. 
+По нажатию на первую должно открываться новое окно с адресом «https://itstep.org». 
+Размеры нового окна должны быть 640х480. 
+По нажатию на вторую кнопку новое окно должно закрываться. 
+2. Создайте HTML-страницу, при загрузке которой будет отображаться список установленных в системе языков. 
+Предпочтительный язык выделите жирным шрифтом. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Java_Event/style/style.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="content">
+        <div class="block-button">
+            <button class="btn" id="button" onclick="newWindow()">Ссылка</button>
+            <button class="btn" id="button2" onclick="closeWindow()">Закрыть</button>
+            <button class="btn" id="button3" onclick="langComp()">Язык</button>
+        </div> 
+        <div class="window-hystory">
+            <div class="history" id="hs">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function newWindow(){
+        let button = document.getElementById('button');
+        let myWindow = window.open("https://yandex.ru/","YANDEX","blank","width=640, height=450");
+        let newWindow = null;
+        if (myWindow) {
+    // Окно успешно открыто
+        } else {
+            alert("Не удалось открыть")
+        }
+    button2.addEventListener("click",closeWindow)
+    function closeWindow(){
+        let myWindow = null
+        if (myWindow && !myWindow.closed) 
+            { myWindow.close(); } 
+            
+        else { alert("Окно уже закрыто"); } }
+    }
+
+    function langComp(){
+        let allLang = navigator.languages;
+        let myLang = navigator.language;
+        let button = document.getElementById('button3');
+        let historyText = document.getElementById('hs');
+        historyText.innerHTML += `В системе усановлены следующие языки ${allLang}, мой язык: <p>${myLang}</p>`;
+    }
+
+</script>
+</html>
