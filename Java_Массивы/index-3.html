@@ -27,6 +27,7 @@
                 <button type="button" id="timeButton">Посчитать</button>
             </form>
         </div>
+        <div class="text" id="textNew"></div>
         <div class="middle-content">
     <div id="monthsBlock"></div>
     <div id="daysBlock"></div>
@@ -36,20 +37,60 @@
 </body>
 <script>
     class TimeNewYear extends Date {
-        constructor(inputDate){
-        super(inputDate);
-        this.nextNewYear = getnextNewYear;
-        }
-        getNextNewYear(){
-            const year = this.getFullYear();
-            if (this.getMonth == 11 && this.getDate() >= 31){
-                return new Date(year + 1,0,1);
-            }
-            else {
-                return new Date(year,11,31);
-            }
+    constructor(inputDate) {
+        super(inputDate); // Используем переданный аргумент для установки начальной даты
+        this.nextNewYear = this.getNextNewYear(); // Рассчитываем ближайшую дату Нового Года
+    }
 
+    getNextNewYear() {
+        const now = new Date(this); // Преобразуем текущую дату в объект Date
+        const year = now.getFullYear(); // Получаем текущий год
+
+        // Проверяем, если дата позже или равна 31 декабря текущего года,
+        // тогда возвращаем первый день следующего года
+        if (now.getMonth() === 11 && now.getDate() >= 31) {
+            return new Date(year + 1, 0, 1); // Следующий год, январь, первое число
+        } else {
+            return new Date(year, 11, 31); // Иначе считаем, что НГ ещё впереди в текущем году
         }
-    } 
+    }
+
+    timeToNewYear() {
+        const diffInMilliseconds = this.nextNewYear - this; // Разница в миллисекундах
+        
+        // Переводим разницу в дни, часы, минуты и секунды
+        const totalSeconds = Math.floor(diffInMilliseconds / 1000);
+        const days = Math.floor(totalSeconds / (3600 * 24));
+        const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        // Подсчет количества полных месяцев
+        const months = Math.floor(days / 30); // Приблизительный расчет месяцев (примерно 30 дней)
+        const monthsBlock = document.getElementById("monthsBlock").innerHTML = `${months} месяцев`
+        const daysBlock = document.getElementById("daysBlock").innerHTML = `${days} дней`
+        const hoursBlock = document.getElementById("hoursBlock").innerHTML = `${hours} часов`
+        const minutesBlock = document.getElementById("minutesBlock").innerHTML = `${minutes} минут`
+        console.log(`До Нового Года осталось:\n
+        ${months} месяцев\n
+        ${days} дней\n
+        ${hours} часов\n
+        ${minutes} минут`);
+    }
+}
+
+ // Настройка поведения при клике на кнопку
+    const timeButton = document.getElementById("timeButton");
+    timeButton.addEventListener("click", function () {
+        const inputValue = document.getElementById("inputDate").value;
+        if (!inputValue) return alert('Необходимо выбрать дату!');
+        
+        const selectedDate = new Date(inputValue);
+        const tny = new TimeNewYear(selectedDate);
+        const middleContent = document.getElementById("textNew");
+        middleContent.innerHTML = "До нового года осталось";
+        middleContent.style.fontSize = "26px";
+        tny.timeToNewYear();
+    });
 </script>
 </html>
