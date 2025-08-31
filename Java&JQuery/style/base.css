@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#football-field {
+    width: 100vw;
+    height: 100vh;
+    background-color: green;
+    position: relative;
+    background-image: url("/Java&JQuery/img/field.jpg");
+    background-position: center;
+}
+
+#ball {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%; /* Круглая форма */
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* Анимация движения */
+    background-image: url("/Java&JQuery/img/ball.png");
+    background-position: center;
+    background-size: cover;
+}

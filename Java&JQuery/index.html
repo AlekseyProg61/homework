@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="js/script.js" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-title">
+          <h1>Java</h1>
+      </div>
+        <div class="header-menu">
+        <div class="menu">
+          <ul></ul>
+          <li><a class="btn" href="/Java&JQuery/football.html">Игра футбол</a></li>
+        </div>
+      </div>
+      <div class="block-content">
+        <form class="form">
+          <label for="usernameInput">Введите имя: </label>
+          <input type="text" id="usernameInput" placeholder="Введите имя"></>
+          <div class="help-text">Нельзя вводить числа и знаки</div>
+          <button class="btn" id="button" type="button">Ввести</button>
+        </form>
+      </div> 
+      <div class="content" id="content"></div>
+      <div class="block-button">
+      <button class="btn" id="closeButton" type="button">Сбросить</button>
+      <button class="btn" onclick="showModal()">Открыть</button>
+      <div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="hideModal()">×</span>
+        <h1>Добро пожаловать в наше модальное окно!</h1>
+    </div>
+</div>
+      </div>
+    </header>
+  </body>
+  <script src="js/script.js"></script>
+</html>
