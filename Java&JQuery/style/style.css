@@ -6,6 +6,8 @@ body {
     background-image: url("/Java_Массивы/img/bg.jpg");
     background-repeat: repeat;
     background-size: cover;
+    font-family: Arial, sans-serif;
+    
 }
 .header-title{
     width: 100%;
@@ -170,4 +172,34 @@ header{
         }
 button:active{
     background-color: #98ff00;
+}
+
+.block-content-form{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    gap: 2rem
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: wheat;
+    padding: 20px;
+}
+#useDigits,#useUppercase,#useLowercase{
+    width: 20px;
+}
+.myLabel{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 18px;
+}
+#myP{
+    font-size: 36px;
+}
+#number {
+    width: 50px;
 }
